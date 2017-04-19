@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ARTECT</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <!--NAVIGATION-->
+    <nav class="navbar navbar-default">
+        <!--LOGO AND TOGGLE-->
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#jpelinks" aria-expanded="false">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="img/logo.png">
+                </a>
+            </div>
+             <div class="collapse navbar-collapse" id="jpelinks">
+                <ul class="nav navbar-nav">
+                     <li><a href="index.html" class="active" onclick="displayForm(); hideResultDiv(); resetForm()">
+					 SIGN OUT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	
+	  
+    <div class="container">
+        <div id="">
+            <!--LOGIN MESSAGE-->
+            <div class="row">
+                <div class="col-xs-12">
+					<h4 class="mytext" id="user"></h4> <br>
+					<div class="adminbar">
+							<a href="adduser.html">Add User</a>
+							<a href="newrecord.html">New Record</a>
+							<a href="edit.html">Edit</a>
+					  <div class="dropdown">
+						<button class="dropbtn">View </button>
+							<div class="dropdown-content">
+								<a href="log.html">Log</a><br/>
+								<a href="record.html">Record</a><br/>
+								<a href="blueprint.html">Blue Print</a><br/>
+							</div>
+						</div>
+						
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="container">
+        <!--Edit User/Record PAGE-->
+        <div class="adminuser">  
+            <h3><u>Edit User/Record</u></h3>
+			<br>
+            <form method="post" id="form">
+				<label for="name" class="sr-only">First Name</label>
+                <input type="text" id="fname" placeholder="firstname" required>
+                <br>
+                <br>
+				<label for="name" class="sr-only">Last Name</label>
+                <input type="text" id="lname" placeholder="lastname" required>
+                <br>
+                <br>
+				<label for="name" class="sr-only">Name</label>
+                <input type="text" id="name" placeholder="Username" required>
+                <br>
+                <br>
+                <label for="password" class="sr-only">Password</label>
+                <input type="password" id="pwd" placeholder="Password" required>
+				<br>
+                <br>
+				<input type="checkbox" id="showPwd" value="first_checkbox" onclick="showPassword()">
+                <label for="showPwd">&nbsp; Show password</label>
+                <br>
+                <br>
+				<label for="newpassword" class="sr-only">Confirm Password</label>
+                <input type="password" id="newpwd" placeholder="Confirm Password" required>
+				
+                <br>
+                <br>
+                <input type="submit" class="btn btn-default" id="Edit" value="Edit">
+            </form>
+        </div>
+    </div>
+	 <!--FOOTER-->
+    <footer id="myfooter">
+        <hr>
+        <p>&copy; 2017. Joint Preparatory Examination Board.</p>
+    </footer>
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

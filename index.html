@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ARTECT</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <!--NAVIGATION-->
+    <nav class="navbar navbar-default">
+        <!--LOGO AND TOGGLE-->
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#jpelinks" aria-expanded="false">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="img/logo.png">
+                </a>
+            </div>
+           
+        </div>
+    </nav>
+    <div class="container">
+        <!--LOGIN PAGE-->
+        <div id="logindiv">
+            <h3 id="welcome">Welcome to Artect Login Page</h3>
+            <br>
+            <form method="post" id="form" onsubmit="logIn(); displayForm(); hideLogIn(); return false">
+                <label for="name" class="sr-only">Name</label>
+                <input type="text" id="name" placeholder="Username" required>
+                <br>
+                <br>
+                <label for="password" class="sr-only">Password</label>
+                <input type="password" id="pwd" placeholder="Password" required>
+                <br>
+                <br>
+                <input type="checkbox" id="showPwd" value="first_checkbox" onclick="showPassword()">
+                <label for="showPwd">&nbsp; Show password</label>
+                <br>
+                <br>
+                <input type="submit" class="btn btn-default" id="btnclick" value="LOGIN">
+            </form>
+			<p class= "mytext"> <a href="admin.html"> <u>Log in as Administrator here </u> </a></p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div id="result">
+            <!--LOGIN MESSAGE-->
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="mytext" id="user"></h4> <br>
+					<p class= "mytext">click <a href='form.html' >here</a> to continue</p>
+                    <h5 class="mytext">Not you, log in to another user <a onclick="showLogIn(); hideResult(); resetLogIn()">here</a>.</h5> <br>
+                </div>
+            </div>
+           
+    <!--FOOTER-->
+    <footer id="myfooter">
+        <hr>
+        <p>&copy; 2017. Joint Preparatory Examination Board.</p>
+    </footer>
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
